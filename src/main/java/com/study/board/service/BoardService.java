@@ -30,4 +30,10 @@ public class BoardService {
 
         return boardRepository.findById(idboard).get();
     }
+
+    //특정 계시글 삭제
+    public void boardDelete(Integer idboard){
+
+        boardRepository.deleteById(idboard);
+    }
 }
