@@ -26,10 +26,11 @@
             </thead>
             <tbody>
             <!--each 의미: board에 담긴 List 데이터들이 전부 들어 갈때까지 반복-->
-            <!--타입리프에서 테이블 명칭을 임의로 부여해서 가져오는 것으로 의심...-->
                 <tr th:each="board : ${List}">
                     <td th:text="${board.idboard}"></td>
-                    <td th:text="${board.title}"></td>
+                    <td>
+                        <a th:href="@{/board/view(idboard=${board.idboard})}" th:text="${board.title}" ></a>
+                    </td>
                 </tr>
             </tbody>
 

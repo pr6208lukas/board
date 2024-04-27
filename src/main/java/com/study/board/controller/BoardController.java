@@ -46,14 +46,7 @@ public class BoardController {
     ;
 
     // localhost:8080/board/view?idboard=1
-    //Request 파라미터 사용법 숙지할것
-    //현재 적용된 방식으로 상세페이지 열어보기
-//    @GetMapping("/board/view")
-//    public String boardview(Model model, HttpServletRequest request){
-//        model.addAttribute("board", boardService.BoardView(request));
-//        return "boardview";
-//
-//    }
+
 // Spring 3.2 부터 RequestParam의 명칭을 명시 하지 않으면 파라미터 설정오류가 발생된다.
     @GetMapping("/board/view")
     public String boardview(Model model, @RequestParam("idboard") Integer idboard){
