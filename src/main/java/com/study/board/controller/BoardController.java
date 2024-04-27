@@ -30,7 +30,7 @@ public class BoardController {
 
         //작성된 내용을 저장하기
         boardService.write(board);
-        return "";
+        return "boardlist";
     }
 
     // 목록 화면으로 이동하기
