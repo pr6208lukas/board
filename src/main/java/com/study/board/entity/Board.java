@@ -1,9 +1,6 @@
 package com.study.board.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -14,8 +11,9 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idboard;
 
+
     private String title;
 
+ 
     private String content;
-
 }
